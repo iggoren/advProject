@@ -16,12 +16,12 @@ public class ClientController {
     private final ClientService clientService;
 
     @GetMapping("/books")
-    List<Book> getAllBooks(){
+    List<Book> getAllBooksFromClient() {
         return clientService.getAllBooks();
     }
 
     @GetMapping("/test")
-    public String showString(){
+    public String showString() {
         return "test1";
     }
 }
