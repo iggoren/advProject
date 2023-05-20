@@ -1,0 +1,18 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: client-service
+
+  profiles:
+    active: native
+server:
+  port: 8082
+
+Lospring:
+  sleuth:
+    sampler:
+      probability: 2.0

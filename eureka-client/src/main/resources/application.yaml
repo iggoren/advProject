@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    register-with-eureka: true
+    fetch-registry: false
+    eureka-server-connect-timeout-seconds: 60
+    eureka-service-url-poll-interval-seconds: 15
+  instance:
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 35
+
+server:
+  port: 8081

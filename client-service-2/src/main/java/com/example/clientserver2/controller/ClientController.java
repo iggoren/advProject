@@ -1,7 +1,7 @@
-package controller;
+package com.example.clientserver2.controller;
 
 import lombok.AllArgsConstructor;
-import model.Book;
+import com.example.clientserver2.model.Book;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
