@@ -20,8 +20,4 @@ public class ClientController {
         return clientService.getAllBooks();
     }
 
-    @GetMapping("/test")
-    public String showString() {
-        return "test1";
-    }
 }
