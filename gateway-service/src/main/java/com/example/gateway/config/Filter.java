@@ -21,7 +21,7 @@ public class Filter implements GatewayFilter {
 
     private Mono<Void> onError(ServerWebExchange exchange) {
         var response = exchange.getResponse();
-        response.setStatusCode(HttpStatus.BAD_REQUEST);
+        response.setStatusCode(HttpStatus.FORBIDDEN);
         return response.setComplete();
     }
 }
