@@ -10,7 +10,19 @@ eureka:
 spring:
   application:
     name: gateway-service
-
+  cloud:
+    gateway:
+      #      routes:
+      #        id: client
+      #      uri: lb://client-service
+      #      predicates:
+      #        - Path=/api/client/**
+      #      filters:
+      #        - RewritePath=/api/client/(?.*), /$\{remains}
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
 Lospring:
   sleuth:
     sampler:

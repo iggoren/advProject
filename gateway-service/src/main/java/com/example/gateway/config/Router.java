@@ -17,11 +17,11 @@ public class Router {
     public RouteLocator routes(RouteLocatorBuilder builder) {
 
         return builder.routes()
-                .route("client", r -> r.path("/api/client/**")
-                        .filters(f -> f.filter(filter))
-//                        .filters(f ->                  f.rewritePath("/api/book-service/(?.*)","/${remains}")
-//                                .addRequestHeader("X-book-Header", "book-service-header")
-                        .uri("lb://CLIENT-SERVICE/"))
+                .route("book-service", r -> r.path("/api/books/**")
+                        //   .filters(f -> f.filter(filter))
+                        .filters(f -> f.rewritePath("/api/books/(?<remains>.*)", "/${remains}")
+                                .addRequestHeader("X-book-Header", "book-service-header"))
+                        .uri("lb://book-service/"))
                 .build();
     }
 }
